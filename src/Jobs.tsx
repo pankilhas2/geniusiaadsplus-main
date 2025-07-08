@@ -11,7 +11,7 @@ const API_KEY = process.env.API_KEY;
 
 export default function Jobs() {
   const [form, setForm] = useState({ nome: '', email: '', whatsapp: '', vaga: '' });
-  const [respostaIA, setRespostaIA] = useState('');
+  const [respostaIA, setRespostaIA] = useState<string>('');
   const [loading, setLoading] = useState(false);
   const [loadingIA, setLoadingIA] = useState(false);
   const [sucesso, setSucesso] = useState(false);

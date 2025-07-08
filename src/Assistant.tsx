@@ -1,15 +1,15 @@
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { GoogleGenAI } from '@google/genai';
 
 // API key must be handled via environment variables.
 const API_KEY = process.env.API_KEY;
 
 const Assistant = () => {
-  const [query, setQuery] = useState('');
-  const [response, setResponse] = useState('');
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
+  const [query, setQuery] = useState<string>('');
+  const [response, setResponse] = useState<string>('');
+  const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string>('');
 
   const handleAsk = async () => {
     if (!query.trim()) return;
