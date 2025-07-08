@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "geniusiaadsplus-main/package.json",
+      "use": "@vercel/static-build"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/geniusiaadsplus-main/$1"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
+}
