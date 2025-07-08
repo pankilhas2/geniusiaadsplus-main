@@ -1,0 +1,6 @@
+{
+  "name": "Genius Hub IA",
+  "description": "Um super app com 5 modalidades: Empregos, Voos, Restaurantes, Hotéis e um Assistente de IA, tudo integrado com Gemini e Supabase.",
+  "prompt": "",
+  "requestFramePermissions": []
+}
