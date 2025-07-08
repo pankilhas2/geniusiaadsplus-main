@@ -19,8 +19,11 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "jsx": "react-jsx",
-    "types": ["react", "node", "react-dom"]
+    "types": ["react", "node", "react-dom"],
+    "esModuleInterop": true,
+    "allowJs": true,
+    "checkJs": true
   },
-  "include": ["src", "index.html"],
+  "include": ["src", "index.html", "vite.config.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
