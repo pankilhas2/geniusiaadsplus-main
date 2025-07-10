@@ -2,14 +2,15 @@
   "version": 2,
   "builds": [
     {
-      "src": "geniusiaadsplus-main/package.json",
-      "use": "@vercel/static-build"
+      "src": "vite.config.ts",
+      "use": "@vercel/static-build",
+      "config": {}
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/geniusiaadsplus-main/$1"
+      "dest": "/"
     }
   ],
   "env": {

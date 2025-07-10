@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { supabase } from './supabaseClient';
 import type { Database } from './supabaseClient';
 

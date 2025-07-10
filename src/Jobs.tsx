@@ -1,13 +1,8 @@
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { supabase } from './supabaseClient';
-import { GoogleGenAI } from '@google/genai';
-import type { Database } from './supabaseClient';
-
-type AgendamentoInsert = Database['public']['Tables']['agendamentos']['Insert'];
 
 // A chave de API deve ser gerenciada por variáveis de ambiente.
-const API_KEY = process.env.API_KEY;
 
 export default function Jobs() {
   const [nome, setNome] = useState('');
@@ -15,6 +10,8 @@ export default function Jobs() {
   const [whatsapp, setWhatsapp] = useState('');
   const [vaga, setVaga] = useState('');
   const [mensagem, setMensagem] = useState('');
+  const [loadingIA, setLoadingIA] = useState(false);
+  const [respostaIA, setRespostaIA] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
